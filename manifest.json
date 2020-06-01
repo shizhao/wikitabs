@@ -1,0 +1,19 @@
+{
+  "name": "Wikitabs",
+  "description": "展示维基百科内容的新标签页",
+  "version": "0.6",
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "https://tools.wmflabs.org/wikitabs"
+  ],
+  "icons":
+	{
+		"16": "img/icon16px.png",
+		"48": "img/icon48px.png",
+		"128": "img/icon.png"
+	},
+  "manifest_version": 2
+}

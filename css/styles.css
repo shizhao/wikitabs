@@ -1,0 +1,86 @@
+body.bg, a {
+    color: rgba(255, 255, 255,.8);
+    text-shadow:0 1px 5px rgba(0,0,0,.1)
+}
+
+div.imagecredit {
+    bottom: 0;
+    clear: right;
+    float: right;
+    right: 0;
+    position: absolute;
+    font-size:12px;
+    padding: 10px 8px 10px 8px
+}
+
+
+
+#container{
+    background-color: rgb(0, 0, 0,.93);
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate3d(-50%,-50%,0);
+    padding: 10px;
+}
+
+.rcdisplay_none{ 
+   display: none;
+} 
+.mw-feed {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.topnav {
+    width:100%
+    padding: 10px 8px 10px 8px;
+    font-size: 15px;
+}
+
+hr {
+    height:1px;
+    border:none;
+    border-top:1px solid #555555;
+}
+
+.left_bottom {
+    bottom: 0;
+    position: absolute;
+    font-size: 15px;
+    padding: 10px 8px 10px 8px;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.nav {
+    display:inline;
+    float: left;
+}
+
+li.nav a {
+    display: block;
+    text-align: center;
+    padding: 0px 8px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .8);
+}
+
+li.nav a:hover, div#about a:hover { 
+    background: rgba(0,0,0,.1); 
+    color: rgba(255, 255, 255);
+}
+div#about a {
+    display: block;
+    text-align: center;
+    padding: 0px 8px;
+    text-decoration: none;
+}
+:link:hover { 
+    color: rgba(255, 255, 255);
+}
