@@ -34,7 +34,7 @@ div.imagecredit {
 }
 
 .topnav {
-    width:100%
+    width:100%;
     padding: 10px 8px 10px 8px;
     font-size: 15px;
 }
@@ -60,7 +60,6 @@ ul.nav {
 
 li.nav {
     display:inline;
-    float: left;
 }
 
 li.nav a {
