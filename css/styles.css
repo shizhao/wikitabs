@@ -21,11 +21,11 @@ div.imagecredit {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate3d(-50%,-50%,0);
+    transform:translate(-50%,-50%);
     padding: 10px;
 }
 
-.rcdisplay_none{ 
+.display_none{ 
    display: none;
 } 
 .mw-feed {
@@ -84,3 +84,52 @@ div#about a {
 :link:hover { 
     color: rgba(255, 255, 255);
 }
+
+div.topnav ul ul {
+    display: none;
+  }
+
+div.topnav li#today:hover > ul {
+    display: block;
+    text-align: center;
+    padding: 0px 8px;
+  }
+
+ul.todaymp {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+      width: 100px;
+      background-color:   rgba(0,0,0,.1);
+  }
+
+li#today {
+    text-align: left;
+    width: 80px
+  }
+ul.todaymp li {
+    text-align: left;
+    line-height: 30px;
+    padding: 5px 0 0 0;
+    margin: 0px;
+}
+
+
+ul.todaymp li a {
+    text-align: left;
+}
+
+div#today_block{
+    background-color: rgb(0, 0, 0,.93);
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    padding: 20px;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: justify;
+    text-justify: auto;
+}
+
