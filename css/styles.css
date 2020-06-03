@@ -34,8 +34,6 @@ div.imagecredit {
 }
 
 .topnav {
-    width:100%;
-    padding: 10px 8px 10px 8px;
     font-size: 15px;
 }
 
@@ -59,7 +57,8 @@ ul.nav {
 }
 
 li.nav {
-    display:inline;
+    display: inline;
+    float: left;
 }
 
 li.nav a {
@@ -125,10 +124,20 @@ div#today_block{
     top: 50%;
     left: 50%;
     transform:translate(-50%,-50%);
-    padding: 20px;
+    padding: 0 20px 0 20px;
     font-size: 15px;
     line-height: 24px;
     text-align: justify;
     text-justify: auto;
+}
+
+.block_close{
+    float: right;
+    font-size: 24px;
+    text-decoration: none;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    z-index: 999;
 }
 

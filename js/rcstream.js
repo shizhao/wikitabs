@@ -58,9 +58,14 @@
       i = 1;
     } else {
       $("#container").hide();
-      stopListening(eventsource)
+      stopListening(eventsource);
       i = 0;
     }
+  });
+  $("a#rc_close").click(function () { 
+    $("#container").hide();
+    stopListening(eventsource);
+    i = 0;  
   });
 
   //var infoNode = document.createElement('div');

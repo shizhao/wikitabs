@@ -33,3 +33,9 @@ $('ul.todaymp li a.fa').click(function () {
         i = 0;
       }
 });
+
+$("a#today_close").click(function () { 
+  $("div#today_block").hide();
+  $("div#today_block").empty();
+  i = 0;
+});
