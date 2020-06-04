@@ -1,10 +1,119 @@
+div.today_content p {
+    margin: 0.5em 0;
+}
+
+/* 首页图像*/
+div.today_content img {
+    margin: 0.4em 0.9em 0.3em 0;
+    border: 0;
+    vertical-align: middle;
+}
+
+div.today_content img.thumbborder {
+    border: 1px solid #555555;
+}
+
 div.today_content div.floatleft {
     float: left;
     clear: left;
 }
 
-div.today_content img {
-    margin: 0.4em 0.9em 0.3em 0;
+div.today_content div.floatright {
+    clear: right;
+    float: right;
+    margin: 0 0 0.5em 0.5em;
+}
+
+/* 你知道吗？*/
+div.today_content ul {
+margin: 0.3em 0 0 1.6em;
+padding: 0;
+}
+
+div.today_content li {
+margin-bottom: 0.5em;
+}
+
+/* 历史上的今天*/
+div.today_content dl {
+    padding-left: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+div.today_content dt {
+    float: left;
+    width: 4.2em;
+    font-weight: bold;
+    margin-bottom: 0.1em;
+    font-weight: bold;
+}
+
+div.today_content dd {
+    margin-bottom: .8em;
+    margin-left: 4.5em;
+    margin-right: 0;
+}
+
+div.today_content ul.gallery {
+    margin: 2px;
+    padding: 2px;
+    display: block;
+}
+
+div.today_content .center {
+    width: 100%;
+}
+
+div.today_content ul.mw-gallery-packed-hover li.gallerybox, div.today_content ul.mw-gallery-packed-overlay li.gallerybox {
+    position: relative;
+}
+
+div.today_content li.gallerybox {
+    vertical-align: top;
+    display: -moz-inline-box;
+    display: inline-block;
+}
+
+div.today_content .center * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.today_content li.gallerybox {
+    margin-bottom: 0.1em;
+}
+
+div.today_content ul.mw-gallery-packed-hover li.gallerybox div.thumb {
+    background-color: transparent;
     border: 0;
-    vertical-align: middle;
+}
+
+div.today_content li.gallerybox div.thumb {
+    text-align: center;
+    margin: 2px;
+}
+
+div.today_content ul.mw-gallery-packed-hover li.gallerybox div.thumb img {
+    margin: 0 auto;
+}
+
+div.today_content li.gallerybox div.thumb img {
+    display: block;
+    margin: 0 auto;
+}
+
+div.today_content div.thumb div a img {
+    border: 1px solid #555555;
+}
+
+div.today_content div.gallerytext {
+    font-size: 94%;
+    padding: 2px 4px;
+    word-wrap: break-word;
+}
+
+div.today_content div.gallerytext {
+    font-size: 94%;
+    word-wrap: break-word;
 }

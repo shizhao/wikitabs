@@ -100,11 +100,12 @@ ul.todaymp {
       margin: 0px;
       width: 100px;
       background-color:   rgba(0,0,0,.1);
+      font-size: 14px;
   }
 
 li#today {
     text-align: left;
-    width: 80px
+    width: 80px;
   }
 ul.todaymp li {
     text-align: left;
@@ -120,7 +121,7 @@ ul.todaymp li a {
 
 div#today_block{
     background-color: rgb(0, 0, 0,.93);
-    width: 50%;
+    width: 30%;
     position: absolute;
     top: 50%;
     left: 50%;
