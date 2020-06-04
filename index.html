@@ -3,6 +3,7 @@
   <title>New Tab - Wikitabs</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/wikistyle.css">
   <link rel="shortcut icon" href="/img/icon16px.png" type="image/png" />
   <link rel="bookmark" href="/img/icon16px.png" type="image/png" />
   <style>
@@ -13,22 +14,22 @@
 <ul class="nav">
  <li id="today" class="nav"><a href="#">今日首页</a>
  <ul class="todaymp">
-  <li><a href="#" class="fa">特色条目</a></li>
-  <li><a href="#" class="dyk">你知道吗？</a></li>
+  <li><a href="#" class="fa click_link">特色条目</a></li>
+  <li><a href="#" class="dyk click_link">你知道吗？</a></li>
 </ul>
 </li>
- <li id="RecentChanges" class="nav"><a href="#">最近更改</a></li>
+ <li id="RecentChanges" class="nav"><a href="#" class="click_link">最近更改</a></li>
  <li id="Watchlist" class="nav"><a href="https://zh.wikipedia.org/wiki/Special:Watchlist">监视列表</a></li>
  </ul>
  </div>
  <div id="container" class="display_none">
-  <a href="#" id="rc_close" class="block_close">&times;</a>
+  <a href="#" id="rc_close" class="block_close click_link"><span>&times;</span></a>
     <h2>最近更改</h2>
     <hr />
     <div id="feed" class="mw-feed"></div>
   </div>
   <div id="today_block"  class="display_none">
-    <a href="#" id="today_close" class="block_close">&times;</a>
+    <a href="#" id="today_close" class="block_close click_link"><span>&times;</span></a>
     <div class="today_content"></div>
   </div> 
 

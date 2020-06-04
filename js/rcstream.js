@@ -51,6 +51,7 @@
     if (i == 0) {
       //var eventsource = new EventSource("https://stream.wikimedia.org/v2/stream/recentchange");
       $("#container").show();
+      z_index_fun("#container","open");
       if (eventsource.readyState == 2) {
         eventsource = new EventSource("https://stream.wikimedia.org/v2/stream/recentchange");
       }
@@ -58,12 +59,14 @@
       i = 1;
     } else {
       $("#container").hide();
+      z_index_fun("#container","close");
       stopListening(eventsource);
       i = 0;
     }
   });
   $("a#rc_close").click(function () { 
     $("#container").hide();
+    z_index_fun("#container","close");
     stopListening(eventsource);
     i = 0;  
   });

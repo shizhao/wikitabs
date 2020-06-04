@@ -37,3 +37,19 @@ xhr.send();
 //$('#RecentChanges').click(function () {
 //    $("#container").toggleClass("rcdisplay_none");
 //});
+//var z_index = parseInt($("div.display_none").css("z-index"));
+
+  
+function z_index_fun(id,status)
+{
+    var z_index = 1;
+    $('div.display_none').each(function() {
+        $(this).css("z-index", z_index);
+        if (status == "open" ) {
+            $(id).css("z-index", z_index + 1);
+        } else if (status == "close") {
+            $(this).css("z-index", z_index - 1);
+        }
+    });
+    return this;
+}
