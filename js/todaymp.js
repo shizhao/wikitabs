@@ -1,5 +1,5 @@
 var i = 0;
-$('ul.todaymp li a.fa').click(function () {
+$('ul.todaymp li#featured').click(function () {
   if (i == 0) {
     $("div#today_block").show();
     z_index_fun("div#today_block","open");
@@ -35,7 +35,7 @@ $('ul.todaymp li a.fa').click(function () {
         if (typeof srcset !== typeof undefined && srcset !== false) {
           $("div.today_content img").error(function () {
             var srcset = $(this).attr("srcset");
-            srcset.replace(/\/\/upload.wikimedia.org/, "https:\/\/upload.wikimedia.org");
+            srcset = srcset.replace(/\/\/upload\.wikimedia\.org/g, "https:\/\/upload.wikimedia.org");
             $(this).off("error").attr("srcset", srcset);
           });
         }
