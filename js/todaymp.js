@@ -1,15 +1,51 @@
 $('ul.todaymp li').click(function () {
-  var feed=$(this).attr("id");
+  var feed = $(this).attr("id");
   console.log($(this).attr("id"));
-  $("div.today_content").empty();
 
-    $("div#today_block").show();
-    z_index_fun("div#today_block","open");
-    var feedurl = `https://tools.wmflabs.org/wikitabs/api/mpapi.php?feed=${feed}`;
-    
+  $("div.today_content").empty();
+  $("div#today_block").show();
+
+  z_index_fun("div#today_block", "open");
+
+  if (feed == "mostread") {
+    //
+    var feedurl = "https://tools.wmflabs.org/wikitabs/api/topapi.php";
+
     var xhr = new XMLHttpRequest();
     xhr.open("GET", feedurl, true);
     var resp = null;
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4) {
+        resp = JSON.parse(xhr.responseText);
+        console.log(resp);
+
+        var block_title = "<h3>今日热门条目</h3>";
+        $("div.today_content").append(block_title);
+        $("div.today_content").append("<ol></ol>");
+        for (n in resp) {
+          if (typeof resp[n] === 'object') {
+            var title = resp[n]['title'];
+            var views = resp[n]['views'];
+            var image = resp[n]['image'];
+            var url = resp[n]['url'];
+            var extract = resp[n]['extract'];
+
+            title = `<li>${title}</li>\n`;
+            $("div.today_content ol").append(title);
+          }
+        }
+
+      }
+    }
+
+  } else {
+    var feedurl = `https://tools.wmflabs.org/wikitabs/api/mpapi.php?feed=${feed}`;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", feedurl, true);
+    var resp = null;
+
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4) {
         resp = JSON.parse(xhr.responseText);
@@ -18,12 +54,15 @@ $('ul.todaymp li').click(function () {
         var title = resp['title'][0];
         var summary = resp['summary'][0];
         title = `<h3>${title}</h3>`;
+
         $("div.today_content").append(title);
         $("div.today_content").append(summary);
+
         urlfix();
       }
     }
-    xhr.send();
+  }
+  xhr.send();
 });
 
 $("a#today_close").click(function () { 
