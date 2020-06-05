@@ -22,7 +22,8 @@ $('ul.todaymp li').click(function () {
 
         var block_title = "<h3>今日热门条目</h3>";
         $("div.today_content").append(block_title);
-        $("div.today_content").append("<ol></ol>");
+        var scollHeight = window.screen.availHeight * 0.7;
+        $("div.today_content").append(`<div class="top_page" style='height:${scollHeight}px;overflow-y:auto'><ol></ol></div>`);
         for (n in resp) {
           if (typeof resp[n] === 'object') {
             var title = resp[n]['title'];
@@ -30,9 +31,15 @@ $('ul.todaymp li').click(function () {
             var image = resp[n]['image'];
             var url = resp[n]['url'];
             var extract = resp[n]['extract'];
+
             var description = resp[n]['description'];
-            title = `<li><a href="${url}">${title}</a><br /><small>${description}</small></li>\n`;
-            $("div.today_content ol").append(title);
+            if (description != null) {
+              var item = `<li><a href="${url}">${title}</a><br /><small>${description}</small></li>\n`;
+            } else {
+              var item = `<li><a href="${url}">${title}</a></li>\n`;
+            }
+
+            $("div.today_content ol").append(item);
           }
         }
 
