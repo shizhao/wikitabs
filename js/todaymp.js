@@ -30,8 +30,8 @@ $('ul.todaymp li').click(function () {
             var image = resp[n]['image'];
             var url = resp[n]['url'];
             var extract = resp[n]['extract'];
-
-            title = `<li>${title}</li>\n`;
+            var description = resp[n]['description'];
+            title = `<li><a href="${url}">${title}</a><br /><small>${description}</small></li>\n`;
             $("div.today_content ol").append(title);
           }
         }
