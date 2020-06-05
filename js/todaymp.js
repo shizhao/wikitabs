@@ -5,7 +5,7 @@ $('ul.todaymp li').click(function () {
 
     $("div#today_block").show();
     z_index_fun("div#today_block","open");
-    var feedurl = `https://tools.wmflabs.org/wikitabs/api/apitest.php?feed=${feed}`;
+    var feedurl = `https://tools.wmflabs.org/wikitabs/api/mpapi.php?feed=${feed}`;
     
     var xhr = new XMLHttpRequest();
     xhr.open("GET", feedurl, true);
