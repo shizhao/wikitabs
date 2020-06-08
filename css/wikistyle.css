@@ -120,7 +120,7 @@ div.today_content div.gallerytext {
 
 div.top_page, .mw-parser-output {
     background-color: #1d1d1d;
-    padding: 20px 20px 0 20px;
+    padding: 20px;
     margin-bottom: 20px;
 }
 
@@ -129,7 +129,11 @@ div.today_content div.top_page li {
     font-size: 14px;
 }
 div.today_content div.top_page ol {
-    padding: 20px 20px 0 20px;
+    padding: 0 20px 0 20px;
+}
+
+div.top_page {
+    padding: 0 20px 0 20px;
 }
 
 div.top_page li small {

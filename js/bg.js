@@ -24,10 +24,10 @@ if (xhr.readyState == 4) {
     var license = resp['license'];
     var license_url = resp['license_url'];
     if (license_url){
-        license = '<a href="'+license_url+'">'+license+'</a>'
+        license = `<a href="${license_url}" target="_blank">${license}</a>`
         }
 
-    var imagecredit = '<a href="'+ file_page + '">'+ title + '</a><br />';
+    var imagecredit = `<a href="${file_page}" target="_blank">${title}</a><br />`;
     imagecredit = imagecredit + 'by ' + artist + ' - ' + credit + ' (' + license + ')';
     $('div.imagecredit').append(imagecredit);
     }

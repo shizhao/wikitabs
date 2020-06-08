@@ -20,7 +20,9 @@ $('ul.todaymp li').click(function () {
         resp = JSON.parse(xhr.responseText);
         console.log(resp);
 
-        var block_title = "<h3>今日热门条目</h3>";
+        var date = resp['date'];
+        date = date.slice(0, -1);
+        var block_title = `<h3>今日热门条目：${date}</h3>`;
         $("div.today_content").append(block_title);
         var scollHeight = window.screen.availHeight * 0.7;
         $("div.today_content").append(`<div class="top_page" style='height:${scollHeight}px;overflow-y:auto'><ol></ol></div>`);
@@ -28,16 +30,14 @@ $('ul.todaymp li').click(function () {
           if (typeof resp[n] === 'object') {
             var title = resp[n]['title'];
             var views = resp[n]['views'];
-            console.log(views);
             var image = resp[n]['image'];
             var url = resp[n]['url'];
             var extract = resp[n]['extract'];
-
             var description = resp[n]['description'];
             if (description != null) {
-              var item = `<li><a href="${url}">${title}</a><small style="float: right;">${views}</small><br /><small>${description}</small></li>\n`;
+              var item = `<li><a href="${url}" target="_blank">${title}</a><small style="float: right;">${views}</small><br /><small>${description}</small></li>\n`;
             } else {
-              var item = `<li><a href="${url}">${title}</a><small style="float: right;">${views}</small></li>\n`;
+              var item = `<li><a href="${url}" target="_blank">${title}</a><small style="float: right;">${views}</small></li>\n`;
             }
 
             $("div.today_content ol").append(item);

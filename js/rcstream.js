@@ -86,7 +86,7 @@
       console.log(event.data.type);
       var title = event.data.title;
       var title_url = event.data.meta.uri;
-      title = `<a href="${title_url}">${title}</a>`;
+      title = `<a href="${title_url}" target="_blank">${title}</a>`;
       var comment = event.data.comment;
       if (comment) {
         comment = `(${comment})`;
@@ -94,7 +94,7 @@
       var server_url = event.data.server_url;
       var length = event.data.length;
       var user = event.data.user;
-      user = `<a href="${server_url}/wiki/Special:Contributions/${encodeURI(user)}">${user}</a>`;
+      user = `<a href="${server_url}/wiki/Special:Contributions/${encodeURI(user)}" target="_blank">${user}</a>`;
 
       if (event.data.bot) {
         var abbr = 'b';
@@ -117,7 +117,7 @@
       if (type === 'edit') {
         var revision = event.data.revision;
         var diff_url = `${server_url}/wiki/Special:Diff/${revision.old}/${revision.new}`;
-        var diff = `<a href="${diff_url}">差异</a>`;
+        var diff = `<a href="${diff_url}" target="_blank">差异</a>`;
         var size = length.new - length.old;
         if (size > 0) {
           size = `+${size}`;
