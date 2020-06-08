@@ -28,15 +28,16 @@ $('ul.todaymp li').click(function () {
           if (typeof resp[n] === 'object') {
             var title = resp[n]['title'];
             var views = resp[n]['views'];
+            console.log(views);
             var image = resp[n]['image'];
             var url = resp[n]['url'];
             var extract = resp[n]['extract'];
 
             var description = resp[n]['description'];
             if (description != null) {
-              var item = `<li><a href="${url}">${title}</a><br /><small>${description}</small></li>\n`;
+              var item = `<li><a href="${url}">${title}</a><small style="float: right;">${views}</small><br /><small>${description}</small></li>\n`;
             } else {
-              var item = `<li><a href="${url}">${title}</a></li>\n`;
+              var item = `<li><a href="${url}">${title}</a><small style="float: right;">${views}</small></li>\n`;
             }
 
             $("div.today_content ol").append(item);

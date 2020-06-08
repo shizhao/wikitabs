@@ -142,11 +142,3 @@ div#today_block{
     right: 10px;
     z-index: 999;
 }
-
-div.today_content div.top_page li {
-    margin: 0;
-    font-size: 14px;
-}
-div.today_content div.top_page ol {
-    padding: 20px;
-}

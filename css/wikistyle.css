@@ -4,7 +4,7 @@ div.today_content p {
 
 /* 首页图像*/
 div.today_content img {
-    margin: 0.4em 0.9em 0.3em 0;
+    margin: 0.6em 0.9em 0.3em 0;
     border: 0;
     vertical-align: middle;
 }
@@ -116,4 +116,22 @@ div.today_content div.gallerytext {
 div.today_content div.gallerytext {
     font-size: 94%;
     word-wrap: break-word;
+}
+
+div.top_page, .mw-parser-output {
+    background-color: #1d1d1d;
+    padding: 20px 20px 0 20px;
+    margin-bottom: 20px;
+}
+
+div.today_content div.top_page li {
+    margin: 0;
+    font-size: 14px;
+}
+div.today_content div.top_page ol {
+    padding: 20px 20px 0 20px;
+}
+
+div.top_page li small {
+    color:#72777d;
 }
