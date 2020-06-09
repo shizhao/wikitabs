@@ -118,7 +118,7 @@ div.today_content div.gallerytext {
     word-wrap: break-word;
 }
 
-div.top_page, .mw-parser-output {
+div.top_page, .mw-parser-output, div.mw-feed {
     background-color: #1d1d1d;
     padding: 20px;
     margin-bottom: 20px;

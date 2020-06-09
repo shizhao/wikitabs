@@ -71,13 +71,13 @@
     i = 0;  
   });
 
-  //var infoNode = document.createElement('div');
-  //eventsource.onopen = function (event) {
-  //    printEvent({
-  //      type: 'info',
-  //      message: 'Connecting...'
-  //    });
-  //};
+  var infoNode = document.createElement('div');
+  eventsource.onopen = function (event) {
+      printEvent({
+        type: 'info',
+        message: '<small style="color:#72777d;">数据接收中...</a>'
+      });
+  };
   
   function printEvent(event) {
     var node;
@@ -142,7 +142,7 @@
         $(feedNode).before(errorNode);
       }
     } else if (event.type === 'info') {
-      $(infoNode).text(event.message);
+      $(infoNode).html(event.message);
       if (!infoNode.parentNode) {
         $(feedNode).prepend(infoNode);
         updateBuffer(infoNode);
