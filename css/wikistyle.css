@@ -118,10 +118,11 @@ div.today_content div.gallerytext {
     word-wrap: break-word;
 }
 
-div.top_page, .mw-parser-output, div.mw-feed {
+div.top_page, .mw-parser-output {
     background-color: #1d1d1d;
     padding: 20px;
     margin-bottom: 20px;
+    opacity: 0.93;
 }
 
 div.today_content div.top_page li {

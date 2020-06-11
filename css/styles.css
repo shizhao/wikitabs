@@ -142,3 +142,7 @@ div#today_block, div#container{
     right: 10px;
     z-index: 999;
 }
+
+div.mw-feed div {
+    padding: 10px 0 10px 0;
+}

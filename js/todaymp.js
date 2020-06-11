@@ -8,7 +8,6 @@ $('ul.todaymp li').click(function () {
   z_index_fun("div#today_block", "open");
 
   if (feed == "mostread") {
-    //
     var feedurl = "https://tools.wmflabs.org/wikitabs/api/topapi.php";
 
     var xhr = new XMLHttpRequest();
@@ -73,9 +72,9 @@ $('ul.todaymp li').click(function () {
   xhr.send();
 });
 
-$("a#today_close").click(function () { 
+$("a#today_close").click(function () {
   $("div#today_block").hide();
-   z_index_fun("div#today_block","close");
+  z_index_fun("div#today_block", "close");
   $("div.today_content").empty();
 });
 

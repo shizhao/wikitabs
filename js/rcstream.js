@@ -20,20 +20,20 @@
 
   function startListening(eventsource) {
     var wiki = 'zhwiki';
-    eventsource.onmessage = function(event) {
-        // event.data will be a JSON string containing the message event.
+    eventsource.onmessage = function (event) {
+      // event.data will be a JSON string containing the message event.
       var change = JSON.parse(event.data);
       if (change.wiki == wiki) {
         printEvent({ type: 'message', data: change });
       }
     };
-    console.log("start RC_Stream: "+eventsource.readyState);
-    eventsource.onerror = function(msg) {
+    console.log("start RC_Stream: " + eventsource.readyState);
+    eventsource.onerror = function (msg) {
       // Don't print {isTrusted: true}.  (Is this an error?)
       if (!msg.isTrusted) {
         printEvent({
-         type: 'error',
-         data: msg
+          type: 'error',
+          data: msg
         });
       }
     };
@@ -42,7 +42,7 @@
   function stopListening(eventsource) {
     eventsource.close();
     //eventsource = null;
-    console.log("stop RC_Stream: "+eventsource.readyState);
+    console.log("stop RC_Stream: " + eventsource.readyState);
   }
 
   var i = 0;
@@ -51,7 +51,7 @@
     if (i == 0) {
       //var eventsource = new EventSource("https://stream.wikimedia.org/v2/stream/recentchange");
       $("#container").show();
-      z_index_fun("#container","open");
+      z_index_fun("#container", "open");
       if (eventsource.readyState == 2) {
         eventsource = new EventSource("https://stream.wikimedia.org/v2/stream/recentchange");
       }
@@ -59,26 +59,26 @@
       i = 1;
     } else {
       $("#container").hide();
-      z_index_fun("#container","close");
+      z_index_fun("#container", "close");
       stopListening(eventsource);
       i = 0;
     }
   });
-  $("a#rc_close").click(function () { 
+  $("a#rc_close").click(function () {
     $("#container").hide();
-    z_index_fun("#container","close");
+    z_index_fun("#container", "close");
     stopListening(eventsource);
-    i = 0;  
+    i = 0;
   });
 
   var infoNode = document.createElement('div');
   eventsource.onopen = function (event) {
-      printEvent({
-        type: 'info',
-        message: '<small style="color:#72777d;">数据接收中...</a>'
-      });
+    printEvent({
+      type: 'info',
+      message: '<small style="color:#72777d;">数据接收中...</a>'
+    });
   };
-  
+
   function printEvent(event) {
     var node;
     if (event.type === 'message') {
@@ -113,7 +113,7 @@
       } else {
         var patrolled = '';
       }
-          
+
       if (type === 'edit') {
         var revision = event.data.revision;
         var diff_url = `${server_url}/wiki/Special:Diff/${revision.old}/${revision.new}`;
@@ -149,5 +149,5 @@
       }
     }
   }
-  
+
 }());
