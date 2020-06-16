@@ -46,3 +46,8 @@ function z_index_fun(id, status) {
     });
     return this;
 }
+
+$.getJSON("manifest.json", function (data) {
+    var ver = `<small>v ${data.version}</small>`;
+    $('div#about').append(ver);
+});

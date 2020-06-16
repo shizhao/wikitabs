@@ -63,7 +63,9 @@ $('ul.todaymp li').click(function () {
         title = `<h3>${title}</h3>`;
 
         $("div.today_content").append(title);
-        $("div.today_content").append(summary);
+        $("div.today_content").append("<div></div>");
+        $("div.today_content div").addClass(feed);
+        $("div.today_content div").append(summary);
 
         urlfix();
       }

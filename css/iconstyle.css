@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7wxfcd');
+  src:  url('../fonts/icomoon.eot?7wxfcd#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7wxfcd') format('truetype'),
+    url('../fonts/icomoon.woff?7wxfcd') format('woff'),
+    url('../fonts/icomoon.svg?7wxfcd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info:before {
+  content: "\e900";
+}
+.icon-tag:before {
+  content: "\e901";
+}
+.icon-notice:before {
+  content: "\e902";
+}
+.icon-add:before {
+  content: "\e903";
+}
+.icon-check:before {
+  content: "\e904";
+}
+.icon-advanced:before {
+  content: "\e905";
+}
+.icon-close:before {
+  content: "\e906";
+}
+.icon-clock:before {
+  content: "\e907";
+}
+.icon-ellipsis:before {
+  content: "\e908";
+}
+.icon-help:before {
+  content: "\e909";
+}
+.icon-newWindow:before {
+  content: "\e90a";
+}
+.icon-search:before {
+  content: "\e90b";
+}
+.icon-star:before {
+  content: "\e90c";
+}
+.icon-userAvatar:before {
+  content: "\e90d";
+}
+.icon-logo-wikimediaCommons:before {
+  content: "\e90e";
+}
+.icon-logo-wikipedia:before {
+  content: "\e90f";
+}
+.icon-calendar:before {
+  content: "\e910";
+}
+.icon-newspaper:before {
+  content: "\e911";
+}
+.icon-page-existing:before {
+  content: "\e912";
+}
+.icon-graph:before {
+  content: "\e913";
+}
+.icon-image:before {
+  content: "\e914";
+}

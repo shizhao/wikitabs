@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/wikistyle.css">
+  <link rel="stylesheet" href="css/iconstyle.css">
   <link rel="shortcut icon" href="/img/icon16px.png" type="image/png" />
   <link rel="bookmark" href="/img/icon16px.png" type="image/png" />
   <style>
@@ -12,23 +13,28 @@
  <body class="bg">
 <div class="topnav">
 <ul class="nav">
- <li id="today" class="nav"><a href="#">今日首页</a>
+ <li id="today" class="nav"><a href="#">
+今日首页</a>
  <ul class="todaymp">
-  <li id="featured"><a href="#">特色条目</a></li>
-  <li id="good"><a href="#">优良条目</a></li>
-  <li id="dyk"><a href="#">你知道吗？</a></li>
-  <li id="onthisday"><a href="#">历史上的今天</a></li>
-  <li id="potd"><a href="#">每日图片</a></li>
-  <li id="mostread"><a href="#">热门条目</a></li>
+  <li id="featured"><a href="#"><span class="icon-star"></span>
+    特色条目</a></li>
+  <li id="good"><a href="#"><span class="icon-add"></span>
+  优良条目</a></li>
+  <li id="dyk"><a href="#"><span class="icon-help"></span>
+  你知道吗？</a></li>
+  <li id="onthisday"><a href="#"><span class="icon-calendar"></span>
+  历史上的今天</a></li>
+  <li id="potd"><a href="#"><span class="icon-image"></span>
+  每日图片</a></li>
+  <li id="mostread"><a href="#"><span class="icon-graph"></span>
+   热门条目</a></li>
 </ul>
 </li>
- <li id="RecentChanges" class="nav"><a href="#">最近更改</a></li>
- <li id="Watchlist" class="nav"><a href="https://zh.wikipedia.org/wiki/Special:Watchlist" target="_blank">监视列表
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
-<g fill="rgba(255, 255, 255,.8)">
-  <path d="M17 17H3V3h5V1H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2z"/>
-  <path d="M19 1h-8l3.29 3.29-5.73 5.73 1.42 1.42 5.73-5.73L19 9V1z"/>
-</g></svg></a></li>
+ <li id="RecentChanges" class="nav"><a href="#">
+  最近更改</a></li>
+ <li id="Watchlist" class="nav"><a href="https://zh.wikipedia.org/wiki/Special:Watchlist" target="_blank">
+  监视列表
+  </a></li>
  </ul>
  </div>
  <div id="container" class="display_none">
@@ -42,13 +48,8 @@
     <div class="today_content"></div>
   </div> 
 
-  <div id="about" class="left_bottom"><a href="https://tools.wmflabs.org/wikitabs" target="_blank">关于
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
- <g fill="rgba(255, 255, 255,.8)">
-    <path d="M17 17H3V3h5V1H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2z"/>
-    <path d="M19 1h-8l3.29 3.29-5.73 5.73 1.42 1.42 5.73-5.73L19 9V1z"/>
-  </g></svg></a></div>
-  <div class="imagecredit"></div>
+  <div id="about" class="left_bottom"><a href="https://tools.wmflabs.org/wikitabs" target="_blank" title="关于"><span class="icon-info" style="font-size: 28px;"></span></a></div>
+<div class="imagecredit"></div>
   <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/bg.js"></script>
   <script type="text/javascript" src="js/rcstream.js"></script>
