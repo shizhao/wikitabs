@@ -1,7 +1,7 @@
 {
   "name": "Wikitabs",
   "description": "展示维基百科内容的新标签页",
-  "version": "0.9",
+  "version": "1.0",
   "incognito": "split",
   "chrome_url_overrides": {
     "newtab": "index.html"
@@ -14,6 +14,11 @@
 		"16": "img/icon16px.png",
 		"48": "img/icon48px.png",
 		"128": "img/icon.png"
-	},
+  },
+  "browser_action":
+{
+	"default_icon": "img/icon.png",
+	"default_title": "在新标签页展示维基百科内容"
+},
   "manifest_version": 2
 }
