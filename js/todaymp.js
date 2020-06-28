@@ -68,6 +68,18 @@ $('ul.todaymp li').click(function () {
         $("div.today_content div").append(summary);
 
         urlfix();
+        
+        //fix poanoramic width
+        if (parseInt($('div.potd img').attr("width")) > window.screen.availWidth) {
+          //console.log($('div.potd img').attr("width"));
+          $('div.potd img').attr("width", window.screen.availWidth * .8);
+          $('div.potd li.gallerybox').attr("style", "width:auto");
+          $('div.potd li.gallerybox > div').attr("style", "width:auto");
+          $('div.potd li.gallerybox div.thumb').attr("style", "width:auto");
+          $('div.potd li.gallerybox div.thumb+div.gallerytextwrapper').attr("style", "width:auto");
+        }
+        // remove background-color of potd
+        $("div.potd div.mw-parser-output").css("background-color","transparent");
       }
     }
   }
