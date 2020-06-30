@@ -147,3 +147,12 @@ div#today_block, div#container{
 div.mw-feed div {
     padding: 10px 0 10px 0;
 }
+
+.progress-views {
+    background: #FFF;
+    height: 5px;
+    opacity:.2;
+}
+
+
+

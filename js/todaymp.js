@@ -25,6 +25,11 @@ $('ul.todaymp li').click(function () {
         $("div.today_content").append(block_title);
         var scollHeight = window.screen.availHeight * 0.7;
         $("div.today_content").append(`<div class="top_page" style='height:${scollHeight}px;overflow-y:auto'><ol></ol></div>`);
+        var first_views = resp[0]['views'];
+        var last_views = resp[Object.getOwnPropertyNames(resp).length-2]['views'];
+        console.log(first_views);
+        console.log(last_views);
+        var n = 0;
         for (n in resp) {
           if (typeof resp[n] === 'object') {
             var title = resp[n]['title'];
@@ -33,16 +38,18 @@ $('ul.todaymp li').click(function () {
             var url = resp[n]['url'];
             var extract = resp[n]['extract'];
             var description = resp[n]['description'];
+            var width = Math.round((views / first_views) * 100)
             if (description != null) {
-              var item = `<li><a href="${url}" target="_blank">${title}</a><small style="float: right;">${views}</small><br /><small>${description}</small></li>\n`;
+              var item = `<li><a href="${url}" target="_blank">${title}</a><small style="float: right;">${views}</small><div class='progress-views views_${n}' style="width:0%"></div>\n<small>${description}</small></li>\n`;
             } else {
-              var item = `<li><a href="${url}" target="_blank">${title}</a><small style="float: right;">${views}</small></li>\n`;
+              var item = `<li><a href="${url}" target="_blank">${title}</a><small style="float: right;">${views}</small>\n<div class='progress-views views_${n}' style="width:0%"></div></li>\n`;
             }
-
             $("div.today_content ol").append(item);
+            $(`div.views_${n}`).animate ({"width": `+=${width}%`}, 'slow');  
           }
         }
-
+        //$('div.top_page ol li').append("<div class='progress-views'></div>");
+        //$("div.progress-views").animate ({"width": "80%"}, 'slow');  
       }
     }
 

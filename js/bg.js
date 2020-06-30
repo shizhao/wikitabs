@@ -51,3 +51,25 @@ $.getJSON("manifest.json", function (data) {
     var ver = `<small>v ${data.version}</small>`;
     $('div#about').append(ver);
 });
+
+function urlfix() {
+    baseurl = "https://zh.wikipedia.org";
+    $("div.today_content a").each(function () {
+      var href = $(this).attr("href");
+      href = baseurl + href;
+      $(this).attr("href", href);
+    });
+    $("div.today_content img").error(function () {
+      var src = "https:" + $(this).attr("src");
+      $(this).off("error").attr("src", src);
+    });
+  
+    var srcset = $("div.today_content img").attr("srcset");
+    if (typeof srcset !== typeof undefined && srcset !== false) {
+      $("div.today_content img").error(function () {
+        var srcset = $(this).attr("srcset");
+        srcset = srcset.replace(/\/\/upload\.wikimedia\.org/g, "https:\/\/upload.wikimedia.org");
+        $(this).off("error").attr("srcset", srcset);
+      });
+    }
+  }
