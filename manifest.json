@@ -1,13 +1,13 @@
 {
   "name": "Wikitabs",
   "description": "展示维基百科内容的新标签页",
-  "version": "1.0",
+  "version": "1.1",
   "incognito": "split",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
   "permissions": [
-    "https://tools.wmflabs.org/wikitabs"
+    "https://wikitabs.toolforge.org/"
   ],
   "icons":
 	{

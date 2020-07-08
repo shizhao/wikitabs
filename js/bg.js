@@ -1,6 +1,6 @@
 var w = window.screen.availWidth;
 var h = window.screen.availHeight;
-var baseURL = 'https://tools.wmflabs.org/wikitabs/api/api.php?';
+var baseURL = 'https://wikitabs.toolforge.org/api/api.php?';
 var searchParams = new URLSearchParams();
 searchParams.append('w', w);
 searchParams.append('h', h);

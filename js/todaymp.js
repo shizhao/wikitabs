@@ -8,7 +8,7 @@ $('ul.todaymp li').click(function () {
   z_index_fun("div#today_block", "open");
 
   if (feed == "mostread") {
-    var feedurl = "https://tools.wmflabs.org/wikitabs/api/topapi.php";
+    var feedurl = "https://wikitabs.toolforge.org/api/topapi.php";
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", feedurl, true);
@@ -54,7 +54,7 @@ $('ul.todaymp li').click(function () {
     }
 
   } else {
-    var feedurl = `https://tools.wmflabs.org/wikitabs/api/mpapi.php?feed=${feed}`;
+    var feedurl = `https://wikitabs.toolforge.org/api/mpapi.php?feed=${feed}`;
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", feedurl, true);
