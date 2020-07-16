@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-down:before {
+  content: "\e915";
+}
+.icon-subtract:before {
+  content: "\e916";
+}
+.icon-sun:before {
+  content: "\e917";
+}
+.icon-up:before {
+  content: "\e918";
+}
 .icon-info:before {
   content: "\e900";
 }

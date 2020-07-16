@@ -38,11 +38,27 @@ $('ul.todaymp li').click(function () {
             var url = resp[n]['url'];
             var extract = resp[n]['extract'];
             var description = resp[n]['description'];
+            var status = resp[n]['status'];
             var width = Math.round((views / first_views) * 100)
+            switch(status){
+              case "up":
+                indicator_icon = '<span class="icon-up"></span>';
+                break;
+              case "down":
+                indicator_icon = '<span class="icon-down"></span>';
+                break;
+              case "-":
+                indicator_icon = '<span class="icon-subtract"></span>';
+                break;
+              case "N":
+                indicator_icon = '<span class="icon-sun"></span>';
+                break;  
+            }
+
             if (description != null) {
-              var item = `<li><a href="${url}" target="_blank">${title}</a><small style="float: right;">${views}</small><div class='progress-views views_${n}' style="width:0%"></div>\n<small>${description}</small></li>\n`;
+              var item = `<li><a href="${url}" target="_blank">${title}</a><small style="float: right;">${views} ${indicator_icon}</small><div class='progress-views views_${n}' style="width:0%"></div>\n<small>${description}</small></li>\n`;
             } else {
-              var item = `<li><a href="${url}" target="_blank">${title}</a><small style="float: right;">${views}</small>\n<div class='progress-views views_${n}' style="width:0%"></div></li>\n`;
+              var item = `<li><a href="${url}" target="_blank">${title}</a><small style="float: right;">${views} ${indicator_icon}</small>\n<div class='progress-views views_${n}' style="width:0%"></div></li>\n`;
             }
             $("div.today_content ol").append(item);
             $(`div.views_${n}`).animate ({"width": `+=${width}%`}, 'slow');  
