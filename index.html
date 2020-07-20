@@ -1,6 +1,7 @@
 <html>
+<!-- 页面中的${name} 只是用于messages定位，无实际用途-->
  <head>
-  <title>New Tab - Wikitabs</title>
+  <title>${tab_name} - ${ext_name}</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/wikistyle.css">
@@ -14,7 +15,7 @@
 <div class="topnav">
 <ul class="nav">
  <li id="today" class="nav"><a href="#">
-今日首页</a>
+${nav_todaymp}</a>
  <ul class="todaymp">
   <li id="featured"><a href="#"><span class="icon-star"></span>
     特色条目</a></li>
@@ -48,9 +49,10 @@
     <div class="today_content"></div>
   </div> 
 
-  <div id="about" class="left_bottom"><a href="https://wikitabs.toolforge.org/" target="_blank" title="关于"><span class="icon-info" style="font-size: 28px;"></span></a></div>
+  <div id="about" class="left_bottom"><a href="https://wikitabs.toolforge.org/" target="_blank" title="${about}"><span class="icon-info" style="font-size: 28px;"></span></a></div>
 <div class="imagecredit"></div>
   <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/messages.js"></script>
   <script type="text/javascript" src="js/bg.js"></script>
   <script type="text/javascript" src="js/rcstream.js"></script>
   <script type="text/javascript" src="js/todaymp.js"></script>

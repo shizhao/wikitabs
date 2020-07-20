@@ -1,0 +1,10 @@
+{
+    "ext_name": {
+      "message": "Wikitabs",
+      "description": "extension name"
+    },
+    "ext_desc": {
+      "message": "Show Wikipedia content in a new tab",
+      "description":"extension description"
+    }
+}

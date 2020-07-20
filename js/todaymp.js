@@ -21,7 +21,7 @@ $('ul.todaymp li').click(function () {
 
         var date = resp['date'];
         date = date.slice(0, -1);
-        var block_title = `<h3>今日热门条目：${date}</h3>`;
+        var block_title = chrome.i18n.getMessage("mostread_title", date);
         $("div.today_content").append(block_title);
         var scollHeight = window.screen.availHeight * 0.7;
         $("div.today_content").append(`<div class="top_page" style='height:${scollHeight}px;overflow-y:auto'><ol></ol></div>`);

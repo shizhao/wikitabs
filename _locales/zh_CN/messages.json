@@ -1,0 +1,44 @@
+{
+    "ext_name": {
+      "message": "Wikitabs",
+      "description": "扩展的名字"
+    },
+    "ext_desc": {
+      "message": "在新标签页展示维基百科内容",
+      "description":"扩展简介"
+    },
+    "rc_stream_info": {
+      "message": "数据接收中...",
+      "description":"最近更改数据流消息"
+    },
+    "rc_stream_data_diff": {
+      "message": "差异",
+      "description":"版本差异"
+    },
+    "mostread_title": {
+      "message": "<h3>今日热门条目：$date$</h3>",
+      "description":"今日热门条目标题",
+      "placeholders": {
+        "date": {
+          "content": "$1",
+          "example": "2020-07-19"
+        }
+      }
+    },
+    "tab_name": {
+      "message": "新标签页",
+      "description":"页面标题"
+    },
+    "about": {
+      "message": "关于",
+      "description":""
+    },
+    "nav_todaymp": {
+      "message": "今日首页",
+      "description":""
+    },
+    "nav_fa": {
+      "message": "特色条目",
+      "description":""
+    }
+}

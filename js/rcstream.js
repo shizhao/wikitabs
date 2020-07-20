@@ -72,10 +72,11 @@
   });
 
   var infoNode = document.createElement('div');
+  var rc_stream_info = chrome.i18n.getMessage("rc_stream_info");
   eventsource.onopen = function (event) {
     printEvent({
       type: 'info',
-      message: '<small style="color:#72777d;">数据接收中...</a>'
+      message: `<small style="color:#72777d;">${rc_stream_info}</a>`
     });
   };
 
@@ -117,7 +118,7 @@
       if (type === 'edit') {
         var revision = event.data.revision;
         var diff_url = `${server_url}/wiki/Special:Diff/${revision.old}/${revision.new}`;
-        var diff = `<a href="${diff_url}" target="_blank">差异</a>`;
+        var diff = `<a href="${diff_url}" target="_blank">${chrome.i18n.getMessage("rc_stream_data_diff")}</a>`;
         var size = length.new - length.old;
         if (size > 0) {
           size = `+${size}`;
