@@ -6,5 +6,71 @@
     "ext_desc": {
       "message": "在新標籤頁展示維基百科內容",
       "description":"擴充簡介"
+    },
+    "rc_stream_info": {
+      "message": "資料接收中...",
+      "description":"最近更改資料流訊息"
+    },
+    "rc_stream_data_diff": {
+      "message": "差異",
+      "description":"版本差異"
+    },
+    "mostread_title": {
+      "message": "<h3>今日熱門條目：$date$</h3>",
+      "description":"今日熱門條目標題",
+      "placeholders": {
+        "date": {
+          "content": "$1",
+          "example": "2020-07-19"
+        }
+      }
+    },
+    "tab_name": {
+      "message": "新分頁",
+      "description":"頁面標題"
+    },
+    "about": {
+      "message": "關於",
+      "description":""
+    },
+    "nav_todaymp": {
+      "message": "今日首頁",
+      "description":""
+    },
+    "nav_fa": {
+      "message": "特色條目",
+      "description":""
+    },
+    "nav_ga": {
+      "message": "優良條目",
+      "description":""
+    },
+    "nav_dyk": {
+      "message": "你知道嗎？",
+      "description":""
+    },
+    "nav_onthisday": {
+      "message": "歷史上的今天",
+      "description":""
+    },
+    "nav_potd": {
+      "message": "每日圖片",
+      "description":""
+    },
+    "nav_mostread": {
+      "message": "熱門條目",
+      "description":""
+    },
+    "nav_rc": {
+      "message": "最近更改",
+      "description":"導航標題"
+    },
+    "nav_watchlist": {
+      "message": "監視列表",
+      "description":""
+    },
+    "rc_h": {
+      "message": "最近更改",
+      "description":""
     }
 }

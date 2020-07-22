@@ -40,5 +40,37 @@
     "nav_fa": {
       "message": "特色条目",
       "description":""
+    },
+    "nav_ga": {
+      "message": "优良条目",
+      "description":""
+    },
+    "nav_dyk": {
+      "message": "你知道吗？",
+      "description":""
+    },
+    "nav_onthisday": {
+      "message": "历史上的今天",
+      "description":""
+    },
+    "nav_potd": {
+      "message": "每日图片",
+      "description":""
+    },
+    "nav_mostread": {
+      "message": "热门条目",
+      "description":""
+    },
+    "nav_rc": {
+      "message": "最近更改",
+      "description":"导航标题"
+    },
+    "nav_watchlist": {
+      "message": "监视列表",
+      "description":""
+    },
+    "rc_h": {
+      "message": "最近更改",
+      "description":""
     }
 }
