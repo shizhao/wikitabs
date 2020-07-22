@@ -6,5 +6,71 @@
     "ext_desc": {
       "message": "Show Wikipedia content in a new tab",
       "description":"extension description"
+    },
+    "rc_stream_info": {
+      "message": "Data receiving...",
+      "description":"Recent changes data stream message"
+    },
+    "rc_stream_data_diff": {
+      "message": "diff",
+      "description":"Version difference"
+    },
+    "mostread_title": {
+      "message": "<h3>Today most read: $date$</h3>",
+      "description":"Today's most read title",
+      "placeholders": {
+        "date": {
+          "content": "$1",
+          "example": "2020-07-19"
+        }
+      }
+    },
+    "tab_name": {
+      "message": "New Tabpage",
+      "description":"page title"
+    },
+    "about": {
+      "message": "About",
+      "description":""
+    },
+    "nav_todaymp": {
+      "message": "Today Mainpage",
+      "description":""
+    },
+    "nav_fa": {
+      "message": "Featured Article",
+      "description":""
+    },
+    "nav_ga": {
+      "message": "Good Article",
+      "description":""
+    },
+    "nav_dyk": {
+      "message": "Did you know ...",
+      "description":""
+    },
+    "nav_onthisday": {
+      "message": "On this day",
+      "description":""
+    },
+    "nav_potd": {
+      "message": "Picture of the day",
+      "description":""
+    },
+    "nav_mostread": {
+      "message": "Most read",
+      "description":""
+    },
+    "nav_rc": {
+      "message": "Recent changes",
+      "description":"Navigation title"
+    },
+    "nav_watchlist": {
+      "message": "Watchlist",
+      "description":""
+    },
+    "rc_h": {
+      "message": "Recent changes",
+      "description":""
     }
 }
