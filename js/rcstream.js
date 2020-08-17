@@ -73,6 +73,7 @@
 
   var infoNode = document.createElement('div');
   var rc_stream_info = chrome.i18n.getMessage("rc_stream_info");
+  //console.log(rc_stream_info);
   eventsource.onopen = function (event) {
     printEvent({
       type: 'info',
@@ -84,7 +85,7 @@
     var node;
     if (event.type === 'message') {
       var type = event.data.type;
-      console.log(event.data.type);
+      //console.log(event.data.type);
       var title = event.data.title;
       var title_url = event.data.meta.uri;
       title = `<a href="${title_url}" target="_blank">${title}</a>`;
